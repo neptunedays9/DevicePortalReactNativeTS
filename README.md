@@ -7,6 +7,9 @@ Run:
 TODO:
 Currently project is displayed as Ruby in github dashboard, fix to display typescipt
 
+Note:
+* localhost is refered as http://10.0.2.2
+
 References:
 * https://github.com/camilosw/react-hooks-services
 * https://github.com/webmasterdevlin/react-native-typescript-react-navigation-v5/

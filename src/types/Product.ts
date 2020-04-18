@@ -4,5 +4,5 @@ export interface Product {
   }
 
   export interface Products {
-    results: Product[];
+    devices: Product[];
   }

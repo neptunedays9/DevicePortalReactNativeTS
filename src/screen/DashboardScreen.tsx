@@ -49,14 +49,15 @@ import getProductsService from '../services/getProductsService';
 const DashboardScreen: React.FC<{}> = () => {
   const service = getProductsService();
 
+  console.log(service);
   return (
     <View>
         <TextInput>UserName</TextInput>
         <TextInput>{service.status}</TextInput>
       {service.status === 'loading' && <Text>Loading...</Text>}
       {service.status === 'loaded' &&
-        service.payload.results.map(product => (
-          <Text> {product.id} </Text>
+        service.payload.devices.map(product => (
+          <Text> {product.id}, {product.description} </Text>
         ))}
       {service.status === 'error' && (
         <Text>Error, the backend moved to the dark side.</Text>
