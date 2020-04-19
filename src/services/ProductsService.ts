@@ -35,11 +35,11 @@ const getProductsService = () => {
     fetch('http://10.0.2.2:5000/api/v1/device/header')
       .then(response => response.json())
       .then(response => {
-        console.log(response);
+        // console.log(response);
         setResult({ status: 'loaded', payload: response })
       })
       .catch(error => {
-        console.log(error);
+        // console.log(error);
         setResult({ status: 'error', error });
       });
   }, []);
