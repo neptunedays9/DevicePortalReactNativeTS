@@ -1,32 +1,10 @@
 
-// import axios from 'axios';
-
-// const data = [
-//     {
-//         id: "11"
-//     },
-//     {
-//         id: "22"
-//     }
-// ];
-
-// const getItemsApi = () => {
-//     // return axios.get("")
-//     // .then(response => {
-//     //     console.log(response);
-//     // });
-//     return data;
-//     // return Promise.resolve(data);
-// };
-
-// export default getItemsApi;
-
 import { useEffect, useState } from 'react';
 import { Service } from '../types/Service';
 import { Products} from '../types/Product';
+import { ImagePath } from 'src/types/ImagePath';
 
-
-const getProductsService = () => {
+export const getProductsService = () => {
   const [result, setResult] = useState<Service<Products>>({
     status: 'loading'
   });
@@ -46,5 +24,3 @@ const getProductsService = () => {
 
   return result;
 };
-
-export default getProductsService;

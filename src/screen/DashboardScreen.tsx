@@ -6,7 +6,7 @@ import {Card, Button, Image} from 'react-native-elements';
 
 import React from 'react';
 import images from '../images/index.js';
-import getProductsService from '../services/ProductsService';
+import { getProductsService } from '../services/GetProductsService';
 import { Item } from "react-native-paper/lib/typescript/src/components/List/List";
 
 const DashboardScreen: React.FC<{}> = () => {
