@@ -6,7 +6,7 @@ import { ImagePath } from 'src/types/ImagePath';
 export const addProductImageService = (image : any) => {
   console.log(image);
 
-  fetch('http://10.0.2.2:5000/api/v1/device/image', {
+  fetch('http://10.0.2.2:5000/api/v1/image', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
