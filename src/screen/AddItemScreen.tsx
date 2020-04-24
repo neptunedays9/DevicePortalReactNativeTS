@@ -24,7 +24,7 @@ class AddItemScreen extends Component<Props, object> {
 
     handleChoosePhoto = () => {
         const options = {
-          noData: true,
+          noData: false,
         }
         ImagePicker.launchImageLibrary(options, response => {
             console.log(response)
@@ -35,12 +35,13 @@ class AddItemScreen extends Component<Props, object> {
       }
 
     submitProduct = () => {
+      
       console.log(this.state.photo.fileName);
       
       const image = {
         name: this.state.photo.fileName,
         type: this.state.photo.type,
-        uri: this.state.photo.uri
+        data: this.state.photo.data
       }
       const response = addProductImageService(image);
     }
