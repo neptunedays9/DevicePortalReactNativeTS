@@ -34,16 +34,17 @@ class AddItemScreen extends Component<Props, object> {
         })
       }
 
-    submitProduct = () => {
-      
-      console.log(this.state.photo.fileName);
-      
+    submitProduct = async () => {
+            
       const image = {
         name: this.state.photo.fileName,
         type: this.state.photo.type,
         data: this.state.photo.data
-      }
-      const response = addProductImageService(image);
+      };
+
+      var response = await addProductImageService(image);
+      var obj = JSON.stringify(response);
+      console.log("R3:" + obj);
     }
 
     createFormData = (photo : any) => {
