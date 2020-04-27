@@ -40,7 +40,7 @@ class AddItemScreen extends Component<Props, object> {
     state = {
         photo: null,
         selectedModel: null,
-        models: null
+        models: []
       }
 
     handleChoosePhoto = () => {
@@ -92,8 +92,8 @@ class AddItemScreen extends Component<Props, object> {
 
     renderDeviceModelList = () => {
       if (this.state.models) {
-        let deviceModels = this.state.models.map( (s, i) => {
-          return <Picker.Item key={i} value={s} label={s} />
+        let deviceModels = this.state.models.map( (s) => {
+          return <Picker.Item key={s.id} value={s.deviceModel} label={s.deviceModel} />  
         });
 
         return deviceModels;

@@ -6,6 +6,6 @@ export const getDeviceModelsService = async () => {
     });
     var obj = await response.json();
     console.log(obj)
-    return (obj);
+    return (obj.deviceModels);
 }
   
